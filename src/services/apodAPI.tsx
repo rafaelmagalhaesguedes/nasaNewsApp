@@ -7,7 +7,7 @@ export interface APODData {
 }
 
 // Token Key
-const apiKey = `BfjznSZpe8iyba9VVhi1OHpRtih2HiLj6kWjMvOo`;
+const apiKey = import.meta.env.VITE_TOKEN; // Token key
 
 // API APOD
 export const fetchAPODData = async () => {
