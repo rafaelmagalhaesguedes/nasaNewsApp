@@ -8,31 +8,50 @@
 header {
   display: flex;
   width: 100%;
-  padding: 20px 70px;
+  padding: 5px 120px;
   justify-content: space-between;
-  background-color: rgb(31, 24, 24);
+  background-image: url('./assets/starfield-banner.jpg');
+  align-items: center;
 }
+
 .logo {
-  width: 20%;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
   font-size: 1.8rem;
   font-weight: 600;
+  align-items: center;
 }
+
+.logo-image {
+  width: 20%;
+}
+
+.logo-image img {
+  width: 100px;
+}
+
 .logo-title {
   color: white;
+  font-size: 2rem;
+  width: 30%;
 }
+
 .nav-bar {
-  width: 80%;
+  width: 60%;
   display: flex;
   padding: 10px;
   justify-content: end;
   font-size: 1.3rem;
   font-weight: 600;
 }
+
 .nav-list {
   display: flex;
   flex-direction: row;
   list-style-type: none;
 }
+
 .nav-link {
   padding-left: 20px;
   text-decoration: none;
@@ -43,23 +62,28 @@ section {
   width: 100%;
   display: flex;
   justify-content: center;
-} 
+}
+
 .content {
   width: 80%;
   display: flex;
   flex-direction: column;
-}  
+}
+
 .title {
   color: black;
   font-size: 3rem;
   margin: 20px 0;
 }
+
 .sub-title {
   font-size: 2rem;
 }
+
 .date {
   margin: 5px 0;
 }
+
 .descricao {
   font-size: 1.1rem;
   text-align: justify;
@@ -71,7 +95,7 @@ footer {
   width: 100%;
   height: 100px;
   margin-top: 30px;
-  background-color: rgb(31, 24, 24);
+  background-image: url('./assets/starfield-banner.jpg');
   color: white;
   font-size: 1.7rem;
   display: flex;

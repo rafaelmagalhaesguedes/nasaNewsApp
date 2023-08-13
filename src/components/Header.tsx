@@ -1,12 +1,16 @@
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import Logo from '../assets/nasa-logo.svg';
 
 export default function Header() {
   return (
     <header>
       <div className='logo'>
-        <Link to='/' className='logo-title'>
-          Nasa News
-        </Link>
+        <div>
+          <Link to='/' className='logo-image'> <img src={ Logo }></img></Link>
+        </div>
+        <div>
+          <Link to='/' className='logo-title'> Nasa News </Link>
+        </div>
       </div>
       <nav className='nav-bar'>
         <ul className='nav-list'>
