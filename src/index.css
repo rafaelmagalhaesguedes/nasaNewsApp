@@ -90,6 +90,11 @@ section {
   margin: 20px 0;
 }
 
+.imagem {
+  width: 100%;
+}
+
+
 footer {
   clear: both;
   width: 100%;

@@ -46,12 +46,14 @@ const Home: React.FC = () => {
                         {apodData.date}
                     </span>
                     <p id="desc" className="descricao">{apodData.description}</p>
+                    <a href={apodData.imageUrl} >
                     <img
                         id="image"
                         src={apodData.imageUrl}
                         alt="Astronomy Picture of the Day"
                         className="imagem"
                     />
+                    </a>
                 </div>
             ) : (
                 <p className="loading">Loading...</p>
