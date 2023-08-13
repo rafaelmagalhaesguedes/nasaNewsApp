@@ -2,16 +2,22 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 
 export default function Header() {
   return (
-    <nav className='nav'>
+    <header>
+      <div className='logo'>
       <Link to='/' className='icon'>
-        NASA APIs
-      </Link>
-      <ul className='nav-list'>
-        <li className='nav-link'><CustomLink to='/'>Home</CustomLink></li>
-        <li className='nav-link'><CustomLink to='/earth'>Earth</CustomLink></li>
-        <li className='nav-link'><CustomLink to='/mars'>Mars</CustomLink></li>
-      </ul>
-    </nav>
+          Nasa APIS
+        </Link>
+      </div>
+      <nav className='nav-bar'>
+        <Link to='/' className='icon'>
+          Home
+        </Link>
+        <ul className='nav-list'>
+          <li className='nav-link'><CustomLink to='/earth'>Earth</CustomLink></li>
+          <li className='nav-link'><CustomLink to='/mars'>Mars</CustomLink></li>
+        </ul>
+      </nav>
+    </header>
   )
 }
 
