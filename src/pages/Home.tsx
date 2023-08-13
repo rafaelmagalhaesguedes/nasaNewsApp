@@ -1,34 +1,18 @@
+// Home.tsx
 import React, { useEffect, useState } from 'react';
-
-interface APODData {
-    title: string;
-    date: string;
-    description: string;
-    imageUrl: string;
-}
+import { APODData, fetchAPODData } from '../services/apisNASA';
 
 const Home: React.FC = () => {
     const [apodData, setAPODData] = useState<APODData | null>(null);
 
     useEffect(() => {
-        fetchAPODData();
+        fetchAPOD();
     }, []);
 
-    const fetchAPODData = async () => {
+    const fetchAPOD = async () => {
         try {
-            const response = await fetch(
-                `https://api.nasa.gov/planetary/apod?api_key=BfjznSZpe8iyba9VVhi1OHpRtih2HiLj6kWjMvOo`
-            );
-            if (!response.ok) {
-                throw new Error('Failed to fetch APOD data');
-            }
-            const data = await response.json();
-            setAPODData({
-                title: data.title,
-                date: data.date,
-                description: data.explanation,
-                imageUrl: data.hdurl,
-            });
+            const data = await fetchAPODData();
+            setAPODData(data);
         } catch (error) {
             console.error('Error fetching APOD data:', error);
         }
