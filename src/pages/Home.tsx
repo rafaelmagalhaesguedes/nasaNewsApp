@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import '../components/Header.css'
 
 interface APODData {
     title: string;

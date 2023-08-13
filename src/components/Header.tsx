@@ -5,7 +5,7 @@ export default function Header() {
     <header>
       <div className='logo'>
         <Link to='/' className='logo-title'>
-          Nasa APIS
+          Nasa News
         </Link>
       </div>
       <nav className='nav-bar'>
