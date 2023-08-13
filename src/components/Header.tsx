@@ -4,17 +4,15 @@ export default function Header() {
   return (
     <header>
       <div className='logo'>
-      <Link to='/' className='icon'>
+        <Link to='/' className='logo-title'>
           Nasa APIS
         </Link>
       </div>
       <nav className='nav-bar'>
-        <Link to='/' className='icon'>
-          Home
-        </Link>
         <ul className='nav-list'>
-          <li className='nav-link'><CustomLink to='/earth'>Earth</CustomLink></li>
-          <li className='nav-link'><CustomLink to='/mars'>Mars</CustomLink></li>
+          <CustomLink to='/'><li className='nav-link'>Home</li></CustomLink>
+          <CustomLink to='/earth'><li className='nav-link'>Earth</li></CustomLink>
+          <CustomLink to='/mars'><li className='nav-link'>Mars</li></CustomLink>
         </ul>
       </nav>
     </header>
