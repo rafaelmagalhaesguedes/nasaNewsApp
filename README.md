@@ -2,6 +2,8 @@
 
 The NASA News System is a web application that leverages the NASA APIs to provide information and images related to space, astronomy, and science. It offers various functionalities to explore the universe and access valuable data collected by NASA.
 
+#### Link Live App: <a href="https://nasanews-rafaelmagalhaesguedes.vercel.app/">Nasa News</a>
+
 ## Table of Contents
 
 - [Introduction](#introduction)
