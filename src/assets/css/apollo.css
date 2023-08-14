@@ -1,0 +1,17 @@
+.header-apollo {
+    background-image: url('../images/apollo.jpg');
+    background-size: cover; /* Ajusta a imagem para cobrir todo o container */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    margin-bottom: 20px;
+    height: 600px;
+}
+
+.title-apollo {
+    color: rgb(238, 226, 226);
+    padding: 50px;
+    font-size: 3rem;
+}
+
+.news-apollo {
+    margin: 30px 0;
+}

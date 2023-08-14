@@ -1,25 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
-interface MediaLink {
-  href: string;
-  rel: string;
-  render: string;
-}
-
-interface MediaItem {
-  data: {
-    album: string[];
-    title: string;
-    description: string;
-  }[];
-  links: MediaLink[];
-}
-
-interface AlbumData {
-  collection: {
-    items: MediaItem[];
-  };
-}
+import { AlbumData } from '../services/interfaces/apolloType';
+import '../assets/css/apollo.css';
 
 const Apollo: React.FC = () => {
   const [albumData, setAlbumData] = useState<AlbumData | null>(null);
@@ -40,7 +21,14 @@ const Apollo: React.FC = () => {
 
   return (
     <div>
-      <div className="container mt-4">
+      <div className="container">
+        <div className="header-apollo">
+          <h2 className="title-apollo"> Mission Apollo 11</h2>
+        </div>
+        <div className="news-apollo">
+          <h3 className="news-mission">Apollo 11 News</h3>
+          <hr />
+        </div>
         <div className="row">
           {albumData?.collection.items.map((item, index) => (
             <div key={index} className="col-md-4 mb-4">

@@ -35,7 +35,7 @@ const Curiosity: React.FC = () => {
                     </ul>
                 </div>
                 <div className="new-images my-3">
-                    <h3>New Images</h3>
+                    <h3>Images Rover Curiosity on Mars</h3>
                 </div>
                 {photos.map(photo => (
                     <div key={photo.id} className="col-md-4 mb-4">

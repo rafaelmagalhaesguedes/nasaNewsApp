@@ -56,27 +56,6 @@ header {
   width: 30%;
 }
 
-.nav-bar {
-  width: 60%;
-  display: flex;
-  padding: 10px;
-  justify-content: end;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.nav-list {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-
-.nav-link {
-  padding-left: 20px;
-  text-decoration: none;
-  color: white;
-}
-
 section {
   width: 100%;
   display: flex;
