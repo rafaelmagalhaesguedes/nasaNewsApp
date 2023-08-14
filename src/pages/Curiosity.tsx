@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchCuriosityImages } from '../services/curiosityAPI';
+import { fetchCuriosityImages } from '../services/apis/curiosityAPI';
 import { Photo } from '../services/interfaces/curiosityType';
 import '../assets/css/curiosity.css';
 

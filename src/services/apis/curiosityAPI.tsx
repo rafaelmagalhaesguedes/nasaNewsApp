@@ -1,4 +1,4 @@
-import { Photo } from './interfaces/curiosityType'; 
+import { Photo } from '../interfaces/curiosityType'; 
 
 interface CuriosityData {
   photos: Photo[];
