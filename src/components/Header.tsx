@@ -1,37 +1,65 @@
-import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/nasa-logo.svg';
 
 export default function Header() {
   return (
-    <header>
-      <div className='logo'>
-        <div>
-          <Link to='/' className='logo-image'> <img src={ Logo }></img></Link>
-        </div>
-        <div>
-          <Link to='/' className='logo-title'> Nasa News </Link>
+    <header className="bg-dark text-light py-3">
+      <div className="container">
+        <div className="d-flex align-items-center justify-content-between">
+          <div className="logo">
+            <div>
+              <Link to="/" className="logo-image">
+                <img src={Logo} alt="NASA Logo" />
+              </Link>
+            </div>
+            <div>
+              <Link to="/" className="logo-title fs-4 text-light text-decoration-none">
+                Nasa News
+              </Link>
+            </div>
+          </div>
+          <nav className="navbar navbar-expand-lg navbar-dark">
+            <div className="container">
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <CustomLink to="/">Home</CustomLink>
+                  </li>
+                  <li className="nav-item">
+                    <CustomLink to="/apollo">Apollo</CustomLink>
+                  </li>
+                  <li className="nav-item">
+                    <CustomLink to="/mars">Mars</CustomLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
         </div>
       </div>
-      <nav className='nav-bar'>
-        <ul className='nav-list'>
-          <CustomLink to='/'><li className='nav-link'>Home</li></CustomLink>
-          <CustomLink to='/earth'><li className='nav-link'>Earth</li></CustomLink>
-          <CustomLink to='/mars'><li className='nav-link'>Mars</li></CustomLink>
-        </ul>
-      </nav>
     </header>
-  )
+  );
 }
 
-function CustomLink({ to, children, ...props }: { to: string; children: React.ReactNode }) {
-  const resolvedPath = useResolvedPath(to)
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-
+function CustomLink({ to, children }: { to: string; children: React.ReactNode }) {
   return (
-    <li className={isActive ? 'active' : ''}>
-      <Link to={to} {...props}>
+    <li className="nav-item">
+      <Link to={to} className="nav-link">
         {children}
       </Link>
     </li>
-  )
+  );
 }

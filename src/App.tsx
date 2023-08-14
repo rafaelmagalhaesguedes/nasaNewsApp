@@ -1,8 +1,8 @@
 import Header from './components/Header'
 import { Footer } from './components/Footer'
 import Home from './pages/Home'
-import { Earth } from './pages/Earth'
-import { Mars } from './pages/Mars'
+import Apollo from './pages/Apollo'
+import Mars from './pages/Mars'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/earth' element={<Earth />} />
+        <Route path='/apollo' element={<Apollo />} />
         <Route path='/mars' element={<Mars />} />
       </Routes>
       <Footer />
