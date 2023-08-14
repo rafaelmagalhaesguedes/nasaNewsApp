@@ -15,6 +15,8 @@ export async function fetchMarsRoverImages(page: number): Promise<Photo[]> {
     try {
         const response = await fetch(apiUrlMarsRover);
         const data: MarsData = await response.json();
+        console.log(data);
+        
         if (data.photos && data.photos.length > 0) {
             return data.photos;
         }

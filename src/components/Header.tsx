@@ -35,13 +35,13 @@ export default function Header() {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <CustomLink to="/">Home</CustomLink>
+                    <CustomLink to="/">News</CustomLink>
                   </li>
                   <li className="nav-item">
-                    <CustomLink to="/apollo">Apollo</CustomLink>
+                    <CustomLink to="/apollo">Apollo 11</CustomLink>
                   </li>
                   <li className="nav-item">
-                    <CustomLink to="/mars">Mars</CustomLink>
+                    <CustomLink to="/curiosity">Curiosity</CustomLink>
                   </li>
                 </ul>
               </div>
