@@ -1,38 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { fetchMarsRoverImages } from '../services/curiosityAPI';
-
-interface Camera {
-    id: number;
-    full_name: string;
-}
-
-interface Rover {
-    id: number;
-    name: string;
-    status: string;
-    total_photos: number;
-    landing_date: string;
-    launch_date: string;
-}
-
-interface Photo {
-    id: number;
-    img_src: string;
-    camera: Camera;
-    earth_date: string;
-    rover: Rover;
-}
+import { fetchCuriosityImages } from '../services/curiosityAPI';
+import { Photo } from '../services/interfaces/curiosityType';
+import '../assets/css/curiosity.css';
 
 const Curiosity: React.FC = () => {
     const [photos, setPhotos] = useState<Photo[]>([]);
     const [page, setPage] = useState<number>(1);
 
     useEffect(() => {
-        loadMarsRoverImages();
+        loadCuriosityRoverImages();
     }, [page]);
 
-    const loadMarsRoverImages = async () => {
-        const newPhotos = await fetchMarsRoverImages(page);
+    const loadCuriosityRoverImages = async () => {
+        const newPhotos = await fetchCuriosityImages(page);
         setPhotos(prevPhotos => [...prevPhotos, ...newPhotos]);
     };
 
@@ -41,27 +21,32 @@ const Curiosity: React.FC = () => {
     };
 
     return (
-        <div className="container mx-auto m-4">
+        <div className="container mx-auto">
             <div className="row">
-                <h2>Curiosity</h2>
-                <ul>
-                    <li>Rover name: Curiosity</li>
-                    <li>Status: active</li>
-                    <li>Camera: Front Hazard Avoidance Camera</li>
-                    <li>Launch date: 2011-11-26</li>
-                    <li>Landing date: 2012-08-06</li>
-                    <li>Total photos: 671523</li>
-                </ul>
+                <div className="box">
+                    <h2 className="title-rover">Curiosity</h2>
+                    <ul className="list-rover">
+                        <li className="link-rover"><strong>Rover name:</strong> Curiosity</li>
+                        <li className="link-rover"><strong>Status:</strong> active</li>
+                        <li className="link-rover"><strong>Camera:</strong> Front Hazard Avoidance Camera</li>
+                        <li className="link-rover"><strong>Launch date:</strong> 2011-11-26</li>
+                        <li className="link-rover"><strong>Landing date:</strong> 2012-08-06</li>
+                        <li className="link-rover"><strong>Total photos:</strong> 671523</li>
+                    </ul>
+                </div>
+                <div className="new-images my-3">
+                    <h3>New Images</h3>
+                </div>
                 {photos.map(photo => (
                     <div key={photo.id} className="col-md-4 mb-4">
                         <a href={photo.img_src} target="_blank" rel="noopener noreferrer">
                             <img
                                 src={photo.img_src}
                                 alt={`Mars Rover ${photo.id}`}
-                                className="img-thumbnail mb-3 img-fluid"
+                                className="img-thumbnail mb-1 img-fluid"
                             />
-                            <p>Date image: {photo.earth_date}</p>
                         </a>
+                        <p className="date-image">Date image: {photo.earth_date}</p>
                     </div>
                 ))}
             </div>

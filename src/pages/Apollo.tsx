@@ -50,7 +50,7 @@ const Apollo: React.FC = () => {
                     <a
                       key={linkIndex}
                       href={link.href}
-                      className="d-block"
+                      className="d-block link"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

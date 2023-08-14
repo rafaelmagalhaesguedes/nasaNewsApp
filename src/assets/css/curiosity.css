@@ -1,0 +1,28 @@
+.box {
+    background-image: url('../images/curiosity.jpg');
+    background-size: cover; /* Ajusta a imagem para cobrir todo o container */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    margin-bottom: 20px;
+    height: 768px;
+}
+
+.title-rover {
+    font-size: 5rem;
+    padding: 200px 0 0 80px;
+    color: white;
+}
+
+.list-rover {
+    list-style-type: none;
+    padding-left: 80px;
+    margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+
+.date-image {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0 ;
+    font-size: 0.9rem;
+}
