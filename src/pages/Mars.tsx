@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { fetchMarsRoverImages } from '../services/marsAPI';
 
 interface Photo {
     img_src: string;
 }
-
-const apiKey = 'BfjznSZpe8iyba9VVhi1OHpRtih2HiLj6kWjMvOo';
-const apiUrlMarsRover = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2021-6-3&api_key=${apiKey}`;
 
 const Mars: React.FC = () => {
     const [photos, setPhotos] = useState<Photo[]>([]);
@@ -15,17 +13,9 @@ const Mars: React.FC = () => {
         loadMarsRoverImages();
     }, []);
 
-    const loadMarsRoverImages = () => {
-        fetch(`${apiUrlMarsRover}&page=${page}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.photos && data.photos.length > 0) {
-                    setPhotos(prevPhotos => [...prevPhotos, ...data.photos]);
-                }
-            })
-            .catch(error => {
-                console.error('Error loading Mars Rover data:', error);
-            });
+    const loadMarsRoverImages = async () => {
+        const newPhotos = await fetchMarsRoverImages(page);
+        setPhotos(prevPhotos => [...prevPhotos, ...newPhotos]);
     };
 
     const loadMoreImages = () => {
