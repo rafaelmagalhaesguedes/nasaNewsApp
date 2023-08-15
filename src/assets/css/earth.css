@@ -1,0 +1,22 @@
+@media only screen and (max-width: 768px) {
+    .control-dots {
+        display: none;
+    }
+
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-apollo {
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .title-apollo {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+}
