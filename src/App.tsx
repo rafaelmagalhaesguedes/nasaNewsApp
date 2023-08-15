@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import { Footer } from './components/Footer'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import Apollo from './pages/Apollo'
 import Curiosity from './pages/Curiosity'

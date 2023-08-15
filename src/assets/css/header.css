@@ -1,0 +1,46 @@
+header {
+  display: flex;
+  width: 100%;
+  padding: 5px 120px;
+  justify-content: space-between;
+  background-image: url('../images/starfield-banner.jpg');
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  font-size: 1.8rem;
+  font-weight: 600;
+  align-items: center;
+}
+
+.logo-image {
+  width: 20%;
+}
+
+.logo-image img {
+  width: 100px;
+}
+
+.logo-title {
+  color: white;
+  font-size: 2rem;
+  width: 30%;
+}
+
+.nav-item {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo-title {
+    display: none;
+  }
+
+  header {
+    padding: 0;
+  }
+}

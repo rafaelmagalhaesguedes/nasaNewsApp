@@ -1,5 +1,11 @@
-export const Footer = () => {
+import '../assets/css/footer.css';
+
+const Footer = () => {
   return (
-    <footer>Footer</footer>
-  )
-}
+    <footer className="bg-dark text-white">
+      Footer
+    </footer>
+  );
+};
+
+export default Footer;

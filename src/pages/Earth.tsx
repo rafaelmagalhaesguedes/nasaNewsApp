@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import '../assets/css/earth.css';
 
 interface ImageData {
   image: string;
@@ -36,7 +37,7 @@ const Earth: React.FC = () => {
 
   return (
     <div className="container mt-4">
-      <h1 className="mb-4">Hearth Images</h1>
+      <h1 className="mb-4">Earth Images</h1>
       <form className="mb-4">
         <div className="mb-3">
           <label htmlFor="datePicker" className="form-label">

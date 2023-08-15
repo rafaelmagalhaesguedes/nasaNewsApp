@@ -1,6 +1,7 @@
 // Home.tsx
 import React, { useEffect, useState } from 'react';
 import { APODData, fetchAPODData } from '../services/apis/apodAPI';
+import '../assets/css/home.css';
 
 const Home: React.FC = () => {
     const [apodData, setAPODData] = useState<APODData | null>(null);

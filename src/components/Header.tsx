@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/images/nasa-logo.svg';
+import '../assets/css/header.css';
 
 export default function Header() {
   return (
