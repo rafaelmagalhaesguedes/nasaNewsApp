@@ -43,6 +43,9 @@ export default function Header() {
                   <li className="nav-item">
                     <CustomLink to="/curiosity">Curiosity</CustomLink>
                   </li>
+                  <li className="nav-item">
+                    <CustomLink to="/earth">Earth</CustomLink>
+                  </li>
                 </ul>
               </div>
             </div>
