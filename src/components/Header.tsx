@@ -15,8 +15,8 @@ export default function Header() {
               </Link>
             </div>
             <div>
-              <Link to="/" className="logo-title fs-4 text-light text-decoration-none">
-                Nasa News
+              <Link to="/" className="logo-title text-decoration-none">
+                NASA News
               </Link>
             </div>
           </div>
@@ -39,13 +39,13 @@ export default function Header() {
                     <CustomLink to="/">News</CustomLink>
                   </li>
                   <li className="nav-item">
-                    <CustomLink to="/apollo">Apollo 11</CustomLink>
-                  </li>
-                  <li className="nav-item">
                     <CustomLink to="/curiosity">Curiosity</CustomLink>
                   </li>
                   <li className="nav-item">
                     <CustomLink to="/earth">Earth</CustomLink>
+                  </li>
+                  <li className="nav-item">
+                    <CustomLink to="/apollo">Apollo</CustomLink>
                   </li>
                 </ul>
               </div>

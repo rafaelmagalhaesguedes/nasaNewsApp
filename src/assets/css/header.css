@@ -1,18 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo Black&display=swap');
+
 header {
   display: flex;
   width: 100%;
-  padding: 5px 120px;
+  padding: 5px;
   justify-content: space-between;
   background-image: url('../images/starfield-banner.jpg');
   align-items: center;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 .logo {
   display: flex;
   flex-direction: row;
   width: 50%;
-  font-size: 1.8rem;
-  font-weight: 600;
   align-items: center;
 }
 
@@ -26,13 +27,18 @@ header {
 
 .logo-title {
   color: white;
-  font-size: 2rem;
+  font-size: 1.6rem;
   width: 30%;
+  letter-spacing: 0.1rem;
+}
+
+.nav-link {
+  color: white;
 }
 
 .nav-item {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
 }
 
 @media only screen and (max-width: 768px) {

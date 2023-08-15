@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita One&display=swap');
+
 section {
   width: 100%;
   display: flex;
@@ -12,8 +14,9 @@ section {
 
 .title {
   color: black;
-  font-size: 3rem;
+  font-size: 5rem;
   margin: 20px 0;
+  font-family: 'Lilita One', sans-serif;
 }
 
 .sub-title {
@@ -32,4 +35,19 @@ section {
 
 .imagem {
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .sub-title {
+    text-align: center;
+  }
+
+  .date {
+    text-align: center;
+  }
 }
